@@ -27,7 +27,6 @@ public class PersonalAccountTest {
     public void exit(){
         homePage.clickPersonal();
         personalAcc.clickLogOut();
-        homePage.openHomePage();
     }
     @Test
     //Проверка переход по клику на «Конструктор»
