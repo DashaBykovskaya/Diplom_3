@@ -10,7 +10,6 @@ public class LoginTest {
     @Test
     public void loginSystemTest(){
         LoginPage loginPage = open(LoginPage.pageURL, LoginPage.class);
-        //loginPage.clickPersonalAccount();
         loginPage.sendPersonalData(email, password);
         loginPage.clickButtonEnter();
     }

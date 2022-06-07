@@ -6,12 +6,9 @@ import org.openqa.selenium.support.How;
 
 public class LoginPage {
     public static final String pageURL = "https://stellarburgers.nomoreparties.site/login";
-    //@FindBy(how = How.CLASS_NAME, using = "AppHeader_header__link__3D_hX")
-    @FindBy(how = How.XPATH, using = "//*[text()='Войти в аккаунт']")
-    private SelenideElement personal; // кнопка "Личный кабинет"
-    @FindBy(how = How.XPATH, using = "//label[text() = 'Email']/../input")
+    @FindBy(how = How.XPATH, using = "//label[text()='Email']/../input")
     private SelenideElement emailField; // поле Email
-    @FindBy(how = How.XPATH, using = "//label[text() = 'Пароль']/../input")
+    @FindBy(how = How.XPATH, using = "//label[text()='Пароль']/../input")
     private SelenideElement passwordField; // поле Пароль
     @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Войти')]")
     private SelenideElement buttonEnter; //кнопка Войти
