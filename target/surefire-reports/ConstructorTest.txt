@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: ConstructorTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 26.762 s <<< FAILURE! - in ConstructorTest
+openBuns(ConstructorTest)  Time elapsed: 17.376 s  <<< FAILURE!
+com.codeborne.selenide.ex.InvalidStateException: 
+Invalid element state [By.xpath: //*[text()='Булки']]: element click intercepted: Element <span class="text text_type_main-default">...</span> is not clickable at point (147, 176). Other element would receive the click: <div style="display: flex;">...</div>
+Screenshot: file:/C:/Users/bykovskayadv/Diplom/Diplom_3/build/reports/tests/1654637797923.0.png
+Page source: file:/C:/Users/bykovskayadv/Diplom/Diplom_3/build/reports/tests/1654637797923.0.html
+Timeout: 4 s.
+Caused by: ElementClickInterceptedException: element click intercepted: Element <span class="text text_type_main-default">...</span> is not clickable at point (147, 176). Other element would receive the click: <div style="display: flex;">...</div>
+	at ConstructorTest.openBuns(ConstructorTest.java:29)
+Caused by: org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <span class="text text_type_main-default">...</span> is not clickable at point (147, 176). Other element would receive the click: <div style="display: flex;">...</div>
+  (Session info: chrome=102.0.5005.63)
+Build info: version: '4.1.2', revision: '9a5a329c5a'
+System info: host: 'QMS-DBY-10', ip: '192.168.0.108', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.14.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [135a4b8f8fc28ba5038084cbc5abb9cf, clickElement {id=59589c78-cd2b-43f4-9a00-5954f44cce0c}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\BYKOVS~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61736}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:61736/devtoo..., se:cdpVersion: 102.0.5005.63, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (135a4b8f8fc28ba5038084cbc5abb9cf)] -> xpath: //*[text()='Булки']]
+Session ID: 135a4b8f8fc28ba5038084cbc5abb9cf
+	at ConstructorTest.openBuns(ConstructorTest.java:29)
+

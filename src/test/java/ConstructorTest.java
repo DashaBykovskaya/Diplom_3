@@ -1,10 +1,15 @@
 import PageObjects.HomePage;
+import org.junit.After;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 
 public class ConstructorTest {
     HomePage homePage = open(HomePage.pageURL, HomePage.class);
+    @After
+    public void closePage(){
+        homePage.close();
+    }
     @Test
     //проверка перехода на вкладку Соусы
     public void openSauces(){

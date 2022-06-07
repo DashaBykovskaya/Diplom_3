@@ -2,6 +2,7 @@ import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.PasswordRecoveryPage;
 import PageObjects.RegistrationPage;
+import org.junit.After;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -14,7 +15,10 @@ public class LoginTest {
     RegistrationPage registrationPage = page(RegistrationPage.class);
     PasswordRecoveryPage passwordRecoveryPage = page(PasswordRecoveryPage.class);
     HomePage homePage = open(HomePage.pageURL, HomePage.class);
-
+    @After
+    public void closePage(){
+        homePage.close();
+    }
     @Test
     //вход через кнопку Личный кабинет
     public void loginSystemPersonalTest(){
@@ -34,7 +38,7 @@ public class LoginTest {
     @Test
     //вход через кнопку Зарегистрироваться
     public void loginSystemSignUpTest(){
-        homePage.signInTest();
+        homePage.clickPersonal();
         loginPage.clickSignUpLoginPage();
         registrationPage.clickBtnSignUp();
         loginPage.sendPersonalData(email, password);
@@ -43,7 +47,7 @@ public class LoginTest {
     @Test
     //вход через кнопку Восстановления пароля
     public void loginSystemRecoveryPageTest(){
-        homePage.signInTest();
+        homePage.clickPersonal();
         loginPage.clickRecoveryBtn();
         passwordRecoveryPage.clickEnter();
         loginPage.sendPersonalData(email, password);

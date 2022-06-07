@@ -1,6 +1,7 @@
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.PersonalPage;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,6 +21,10 @@ public class LogOutTest {
         loginPage.sendPersonalData(email, password);
         loginPage.clickButtonEnter();
         homePage.clickPersonal();
+    }
+    @After
+    public void closePage(){
+        homePage.close();
     }
     @Test
     //проверка выхода из личного кабинет

@@ -12,16 +12,16 @@ public class RegistrationPage {
     private SelenideElement emailField; // поле Email
     @FindBy(how = How.XPATH, using = "//label[text()='Пароль']/../input")
     private SelenideElement passwordField; // поле Пароль
-    @FindBy(how = How.CLASS_NAME, using = "input__container")
-    private SelenideElement signUp; //кнопка Зарегистрироваться*/
+    @FindBy(how = How.CLASS_NAME, using = "Auth_link__1fOlj")
+    private SelenideElement signUp; //кнопка Войти
     @FindBy(how = How.XPATH, using = "//a[contains(text(), 'Зарегистрироваться')]")
-    private SelenideElement enter; // поле Войти
+    private SelenideElement enter; // поле Зарегистрироваться
     @FindBy(how = How.XPATH, using = ".//p[contains(text(),'Некорректный пароль')]")
     private SelenideElement errorMessage; //ошибка при некорректном пароле
 
     //нажимаем на кнопку Войти
     public void clickBtnSignUp(){
-        enter.click();
+        signUp.click();
     }
     //вводи Имя
     public void enterName(String name){

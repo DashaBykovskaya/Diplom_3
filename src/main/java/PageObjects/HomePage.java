@@ -62,4 +62,7 @@ public class HomePage {
     public void openBuns(){
         buns.shouldBe(Condition.visible);
     }
+    public void close(){
+        Selenide.webdriver().driver().close();
+    }
 }
