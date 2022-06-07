@@ -1,8 +1,7 @@
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
-import PageObjects.PersonalAcc;
+import PageObjects.PersonalPage;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +14,7 @@ public class PersonalAccountTest {
     String password = "Qwerty";
     HomePage homePage = open(HomePage.pageURL, HomePage.class);
     LoginPage loginPage = page(LoginPage.class);
-    PersonalAcc personalAcc = page(PersonalAcc.class);
+    PersonalPage personalAcc = page(PersonalPage.class);
 
     @Before
     public void setUp() {

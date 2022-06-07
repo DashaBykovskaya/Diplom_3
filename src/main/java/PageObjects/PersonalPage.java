@@ -4,7 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-public class PersonalAcc {
+public class PersonalPage {
     @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Выход')]")
     private SelenideElement logOut; //кнопка Выход
     @FindBy(how = How.CLASS_NAME, using = "AppHeader_header__link__3D_hX")
