@@ -16,13 +16,8 @@ public class LoginPage {
     private SelenideElement personalButton; //кнопка Личный кабинет
     @FindBy(how = How.XPATH, using = "//a[contains(text(), 'Зарегистрироваться')]")
     private SelenideElement signUp; //кнопка Зарегистрироваться
-    @FindBy(how = How.CLASS_NAME, using = "Auth_link__1fOlj")
+    @FindBy(how = How.XPATH, using = ".//a[text()='Восстановить пароль']")
     private SelenideElement restorePassword; //кнопка Восстановить пароль
-    @FindBy(how = How.XPATH, using = ".//div[text()='Восстановить пароль']")
-    private SelenideElement constructorButton; // кнопка Конструктор
-    @FindBy(how = How.CLASS_NAME, using = "AppHeader_header__logo__2D0X2")
-    private SelenideElement logoBugers; //логотип Бургер*/
-
     //вводим email
     public void enterEmail(String email){
         emailField.setValue(email);
@@ -43,6 +38,10 @@ public class LoginPage {
     //нажимаем на кнопку Регистрация
     public void clickSignUpLoginPage(){
         signUp.click();
+    }
+    //нажимаем на кнопку Восстановить пароль
+    public void clickRecoveryBtn(){
+        restorePassword.click();
     }
 
 }

@@ -1,5 +1,6 @@
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
+import PageObjects.PasswordRecoveryPage;
 import PageObjects.RegistrationPage;
 import org.junit.Test;
 
@@ -11,6 +12,7 @@ public class LoginTest {
     String password = "Qwerty";
     LoginPage loginPage = page(LoginPage.class);
     RegistrationPage registrationPage = page(RegistrationPage.class);
+    PasswordRecoveryPage passwordRecoveryPage = page(PasswordRecoveryPage.class);
     HomePage homePage = open(HomePage.pageURL, HomePage.class);
 
     @Test
@@ -35,6 +37,15 @@ public class LoginTest {
         homePage.signInTest();
         loginPage.clickSignUpLoginPage();
         registrationPage.clickBtnSignUp();
+        loginPage.sendPersonalData(email, password);
+        loginPage.clickButtonEnter();
+    }
+    @Test
+    //вход через кнопку Восстановления пароля
+    public void loginSystemRecoveryPageTest(){
+        homePage.signInTest();
+        loginPage.clickRecoveryBtn();
+        passwordRecoveryPage.clickEnter();
         loginPage.sendPersonalData(email, password);
         loginPage.clickButtonEnter();
     }
