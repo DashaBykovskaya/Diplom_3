@@ -17,6 +17,10 @@ public class LoginPage {
     private SelenideElement signUp; //кнопка Зарегистрироваться
     @FindBy(how = How.XPATH, using = ".//a[text()='Восстановить пароль']")
     private SelenideElement restorePassword; //кнопка Восстановить пароль
+    @FindBy(how = How.CLASS_NAME, using = "AppHeader_header__link__3D_hX")
+    private SelenideElement constructor; //кнопка открытие конструктора
+    @FindBy(how = How.CLASS_NAME, using = "AppHeader_header__logo__2D0X2")
+    private SelenideElement logo; //логотип сайта
     //вводим email
     public void enterEmail(String email){
         emailField.setValue(email);
@@ -41,6 +45,14 @@ public class LoginPage {
     //нажимаем на кнопку Восстановить пароль
     public void clickRecoveryBtn(){
         restorePassword.click();
+    }
+    //открываем конструктор
+    public void clickOpenConstructor(){
+        constructor.click();
+    }
+    //нажимаем на логотип сайта
+    public void clickLogo(){
+        logo.click();
     }
 
 }
