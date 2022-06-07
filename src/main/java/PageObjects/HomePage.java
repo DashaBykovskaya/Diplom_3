@@ -5,12 +5,22 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import static com.codeborne.selenide.Selenide.webdriver;
+import static com.codeborne.selenide.WebDriverConditions.url;
+
 public class HomePage {
     public static final String pageURL = "https://stellarburgers.nomoreparties.site/";
     @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Войти в аккаунт')]")
     private SelenideElement buttonEnterFromMainPage; //кнопка Войти в аккаунт
     @FindBy(how = How.XPATH, using = "//*[text()='Личный Кабинет']")
     private SelenideElement personalButton; //кнопка Личный кабинет
+    @FindBy(how = How.XPATH, using = "//*[text()='Булки']")
+    private SelenideElement buns; //вкладка Булки
+    @FindBy(how = How.XPATH, using = "//*[text()='Соусы']")
+    private SelenideElement sauces; //вкладка Соусы
+    @FindBy(how = How.XPATH, using = "//*[text()='Начинки']")
+    private SelenideElement fillings; //вкладка Начинки
+
 
     //нажимаем на кнопку Войти в аккаунт
     public void signInTest(){
@@ -20,9 +30,8 @@ public class HomePage {
     public void clickPersonal(){
         personalButton.click();
     }
-    //открытие страницы https://stellarburgers.nomoreparties.site
+    //проверка открытия страницы https://stellarburgers.nomoreparties.site
     public void openHomePage(){
-        //Selenide.open("https://stellarburgers.nomoreparties.site/");
 
     }
 }

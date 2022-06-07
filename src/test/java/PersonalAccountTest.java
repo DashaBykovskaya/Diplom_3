@@ -5,8 +5,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.page;
+import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverConditions.url;
 
 public class PersonalAccountTest {
 
@@ -33,12 +33,12 @@ public class PersonalAccountTest {
     //Проверка переход по клику на «Конструктор»
     public void openConstructorTest(){
         personalAcc.clickOpenConstructor();
-        homePage.openHomePage();
+        webdriver().shouldHave(url("https://stellarburgers.nomoreparties.site/"));
     }
     @Test
     //Проверка перехода по логотипу
     public void clickLogoTest(){
         personalAcc.clickLogo();
-        homePage.openHomePage();
+        webdriver().shouldHave(url("https://stellarburgers.nomoreparties.site/"));
     }
 }
