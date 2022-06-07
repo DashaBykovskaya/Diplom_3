@@ -14,7 +14,7 @@ public class LoginPage {
     private SelenideElement buttonEnter; //кнопка Войти
     @FindBy(how = How.XPATH, using = "//*[text()='Личный Кабинет']")
     private SelenideElement personalButton; //кнопка Личный кабинет
-    @FindBy(how = How.CLASS_NAME, using = "Auth_link__1fOlj")
+    @FindBy(how = How.XPATH, using = "//a[contains(text(), 'Зарегистрироваться')]")
     private SelenideElement signUp; //кнопка Зарегистрироваться
     @FindBy(how = How.CLASS_NAME, using = "Auth_link__1fOlj")
     private SelenideElement restorePassword; //кнопка Восстановить пароль
@@ -39,6 +39,10 @@ public class LoginPage {
     public void sendPersonalData(String email, String password){
         enterEmail(email);
         enterPassword(password);
+    }
+    //нажимаем на кнопку Регистрация
+    public void clickSignUpLoginPage(){
+        signUp.click();
     }
 
 }

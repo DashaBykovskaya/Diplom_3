@@ -10,8 +10,6 @@ public class HomePage {
     private SelenideElement buttonEnterFromMainPage; //кнопка Войти в аккаунт
     @FindBy(how = How.XPATH, using = "//*[text()='Личный Кабинет']")
     private SelenideElement personalButton; //кнопка Личный кабинет
-    //@FindBy(how = How.XPATH, using = ".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_large__G21Vg']")
-    //private SelenideElement signIn; //кнопка Войти в аккаунт
 
     //нажимаем на кнопку Войти в аккаунт
     public void signInTest(){
