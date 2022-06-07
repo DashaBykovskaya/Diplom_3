@@ -17,4 +17,8 @@ public class HomePage {
     public void signInTest(){
         buttonEnterFromMainPage.click();
     }
+    //нажимаем на кнопку Личный кабинет
+    public void clickPersonal(){
+        personalButton.click();
+    }
 }

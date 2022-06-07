@@ -23,10 +23,6 @@ public class LoginPage {
     @FindBy(how = How.CLASS_NAME, using = "AppHeader_header__logo__2D0X2")
     private SelenideElement logoBugers; //логотип Бургер*/
 
-    //нажимаем на кнопку Личный кабинет
-    public void clickPersonal(){
-        personalButton.click();
-    }
     //вводим email
     public void enterEmail(String email){
         emailField.setValue(email);

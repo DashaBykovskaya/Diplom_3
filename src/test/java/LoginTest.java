@@ -9,14 +9,14 @@ public class LoginTest {
     String email = "123@456.ru";
     String password = "Qwerty";
     LoginPage loginPage = page(LoginPage.class);
-    HomePage homePage;
+    //HomePage homePage;
 
     @Test
     //вход через кнопку Личный кабинет
     public void loginSystemPersonalTest(){
         //LoginPage loginPage = open(LoginPage.pageURL, LoginPage.class);
         HomePage homePage = open(HomePage.pageURL, HomePage.class);
-        loginPage.clickPersonal();
+        homePage.clickPersonal();
         loginPage.sendPersonalData(email, password);
         loginPage.clickButtonEnter();
     }
@@ -26,7 +26,7 @@ public class LoginTest {
     public void loginSystemMaiPageTest(){
         HomePage homePage = open(HomePage.pageURL, HomePage.class);
         homePage.signInTest();
-        loginPage.clickPersonal();
+        homePage.clickPersonal();
         loginPage.sendPersonalData(email, password);
         loginPage.clickButtonEnter();
     }
