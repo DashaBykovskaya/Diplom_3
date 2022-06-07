@@ -22,6 +22,7 @@ public class HomePage {
     }
     //открытие страницы https://stellarburgers.nomoreparties.site
     public void openHomePage(){
-        Selenide.open("https://stellarburgers.nomoreparties.site/");
+        //Selenide.open("https://stellarburgers.nomoreparties.site/");
+
     }
 }

@@ -14,7 +14,7 @@ public class RegistrationPage {
     private SelenideElement passwordField; // поле Пароль
     @FindBy(how = How.CLASS_NAME, using = "input__container")
     private SelenideElement signUp; //кнопка Зарегистрироваться*/
-    @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Зарегистрироваться')]")
+    @FindBy(how = How.XPATH, using = "//a[contains(text(), 'Зарегистрироваться')]")
     private SelenideElement enter; // поле Войти
     @FindBy(how = How.XPATH, using = ".//p[contains(text(),'Некорректный пароль')]")
     private SelenideElement errorMessage; //ошибка при некорректном пароле
