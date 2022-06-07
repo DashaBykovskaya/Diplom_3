@@ -5,7 +5,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class LoginPage {
-    public static final String pageURL = "https://stellarburgers.nomoreparties.site";
     @FindBy(how = How.XPATH, using = "//label[text()='Email']/../input")
     private SelenideElement emailField; // поле Email
     @FindBy(how = How.XPATH, using = "//label[text()='Пароль']/../input")
