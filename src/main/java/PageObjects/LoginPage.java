@@ -5,13 +5,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class LoginPage {
-    public static final String pageURL = "https://stellarburgers.nomoreparties.site/login";
+    public static final String pageURL = "https://stellarburgers.nomoreparties.site";
     @FindBy(how = How.XPATH, using = "//label[text()='Email']/../input")
     private SelenideElement emailField; // поле Email
     @FindBy(how = How.XPATH, using = "//label[text()='Пароль']/../input")
     private SelenideElement passwordField; // поле Пароль
     @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Войти')]")
     private SelenideElement buttonEnter; //кнопка Войти
+    @FindBy(how = How.XPATH, using = "//*[text()='Личный Кабинет']")
+    private SelenideElement personalButton; //кнопка Личный кабинет
     @FindBy(how = How.CLASS_NAME, using = "Auth_link__1fOlj")
     private SelenideElement signUp; //кнопка Зарегистрироваться
     @FindBy(how = How.CLASS_NAME, using = "Auth_link__1fOlj")
@@ -21,6 +23,10 @@ public class LoginPage {
     @FindBy(how = How.CLASS_NAME, using = "AppHeader_header__logo__2D0X2")
     private SelenideElement logoBugers; //логотип Бургер*/
 
+    //нажимаем на кнопку Личный кабинет
+    public void clickPersonal(){
+        personalButton.click();
+    }
     //вводим email
     public void enterEmail(String email){
         emailField.setValue(email);
