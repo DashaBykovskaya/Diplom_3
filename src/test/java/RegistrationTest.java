@@ -9,10 +9,10 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class RegistrationTest {
     String name = "Test";
-    String email = "12310@456.ru";
+    String email = "12@456.ru";
     String password = "Qwerty";
     String name1 = "Test1";
-    String email1 = "12310@45611.ru";
+    String email1 = "12370@45611.ru";
     String password1 = "Qwe";
     LoginPage loginPage = page(LoginPage.class);
     RegistrationPage registrationPage = page(RegistrationPage.class);
