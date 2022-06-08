@@ -1,7 +1,8 @@
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
-import PageObjects.PasswordRecoveryPage;
 import PageObjects.RegistrationPage;
+import io.qameta.allure.junit4.DisplayName;
+import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Test;
 
@@ -18,21 +19,24 @@ public class RegistrationTest {
     LoginPage loginPage = page(LoginPage.class);
     RegistrationPage registrationPage = page(RegistrationPage.class);
     HomePage homePage = open(HomePage.pageURL, HomePage.class);
+
     @After
-    public void closePage(){
+    public void closePage() {
         homePage.close();
     }
+
     @Test
-    //регистрация нового пользователя
-    public void RegistrationPageTest(){
+    @DisplayName("Регистрация нового пользователя")
+    public void RegistrationPageTest() {
         homePage.clickPersonal();
         loginPage.clickSignUpLoginPage();
         registrationPage.sendPersonalData(name, email, password);
         registrationPage.clickButtonEnter();
     }
+
     @Test
-    //регистрация при неверном пароле
-    public void incorrectPasswordTest(){
+    @DisplayName("Регистрация нового пользователя при вводе некорректного пароля")
+    public void incorrectPasswordTest() {
         homePage.clickPersonal();
         loginPage.clickSignUpLoginPage();
         registrationPage.sendPersonalDataIncorrectPassword(name1, email1, password1);

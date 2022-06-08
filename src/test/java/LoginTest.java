@@ -2,6 +2,8 @@ import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.PasswordRecoveryPage;
 import PageObjects.RegistrationPage;
+import io.qameta.allure.junit4.DisplayName;
+import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Test;
 
@@ -15,38 +17,42 @@ public class LoginTest {
     RegistrationPage registrationPage = page(RegistrationPage.class);
     PasswordRecoveryPage passwordRecoveryPage = page(PasswordRecoveryPage.class);
     HomePage homePage = open(HomePage.pageURL, HomePage.class);
+
     @After
-    public void closePage(){
+    public void closePage() {
         homePage.close();
     }
+
     @Test
-    //вход через кнопку Личный кабинет
-    public void loginSystemPersonalTest(){
+    @DisplayName("Вход в аккаунт через кнопку Личный кабинет")
+    public void loginSystemPersonalTest() {
         homePage.clickPersonal();
         loginPage.sendPersonalData(email, password);
         loginPage.clickButtonEnter();
     }
 
     @Test
-    //вход через кнопку Войти в аккаунт
-    public void loginSystemMaiPageTest(){
+    @DisplayName("Вход в аккаунт через кнопку Войти в аккаунт")
+    public void loginSystemMaiPageTest() {
         homePage.signInTest();
         homePage.clickPersonal();
         loginPage.sendPersonalData(email, password);
         loginPage.clickButtonEnter();
     }
+
     @Test
-    //вход через кнопку Зарегистрироваться
-    public void loginSystemSignUpTest(){
+    @DisplayName("Вход в аккаунт через кнопку Зарегистрироваться")
+    public void loginSystemSignUpTest() {
         homePage.clickPersonal();
         loginPage.clickSignUpLoginPage();
         registrationPage.clickBtnSignUp();
         loginPage.sendPersonalData(email, password);
         loginPage.clickButtonEnter();
     }
+
     @Test
-    //вход через кнопку Восстановления пароля
-    public void loginSystemRecoveryPageTest(){
+    @DisplayName("Вход в аккаунт через кнопку Восстановления пароля")
+    public void loginSystemRecoveryPageTest() {
         homePage.clickPersonal();
         loginPage.clickRecoveryBtn();
         passwordRecoveryPage.clickEnter();

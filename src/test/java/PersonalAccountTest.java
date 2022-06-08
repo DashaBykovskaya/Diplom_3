@@ -1,6 +1,8 @@
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.PersonalPage;
+import io.qameta.allure.junit4.DisplayName;
+import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,21 +25,24 @@ public class PersonalAccountTest {
         loginPage.clickButtonEnter();
         homePage.clickPersonal();
     }
+
     @After
-    public void exit(){
+    public void exit() {
         homePage.clickPersonal();
         personalAcc.clickLogOut();
         homePage.close();
     }
+
     @Test
-    //Проверка переход по клику на «Конструктор»
-    public void openConstructorTest(){
+    @DisplayName("Проверка переход по клику на «Конструктор»")
+    public void openConstructorTest() {
         personalAcc.clickOpenConstructor();
         webdriver().shouldHave(url("https://stellarburgers.nomoreparties.site/"));
     }
+
     @Test
-    //Проверка перехода по логотипу
-    public void clickLogoTest(){
+    @DisplayName("Проверка переход по клику на логотип")
+    public void clickLogoTest() {
         personalAcc.clickLogo();
         webdriver().shouldHave(url("https://stellarburgers.nomoreparties.site/"));
     }

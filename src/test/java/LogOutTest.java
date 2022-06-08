@@ -1,6 +1,8 @@
 import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.PersonalPage;
+import io.qameta.allure.junit4.DisplayName;
+import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,13 +24,15 @@ public class LogOutTest {
         loginPage.clickButtonEnter();
         homePage.clickPersonal();
     }
+
     @After
-    public void closePage(){
+    public void closePage() {
         homePage.close();
     }
+
     @Test
-    //проверка выхода из личного кабинет
-    public void logoutTest(){
+    @DisplayName("Проверка выхода из личного кабинет")
+    public void logoutTest() {
         personalAcc.clickLogOut();
     }
 }

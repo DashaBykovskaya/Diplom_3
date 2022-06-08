@@ -1,6 +1,7 @@
 package PageObjects;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
@@ -11,16 +12,19 @@ public class PersonalPage {
     private SelenideElement constructor; //кнопка открытие конструктора
     @FindBy(how = How.CLASS_NAME, using = "AppHeader_header__logo__2D0X2")
     private SelenideElement logo; //логотип сайта
-    //нажимаем на кнопку Выход
-    public void clickLogOut(){
+
+    @Step("Нажимаем на кнопку Выход")
+    public void clickLogOut() {
         logOut.click();
     }
-    //открываем конструктор
-    public void clickOpenConstructor(){
+
+    @Step("Открываем конструктор")
+    public void clickOpenConstructor() {
         constructor.click();
     }
-    //нажимаем на логотип сайта
-    public void clickLogo(){
+
+    @Step("Нажимаем на логотип сайта")
+    public void clickLogo() {
         logo.click();
     }
 }
