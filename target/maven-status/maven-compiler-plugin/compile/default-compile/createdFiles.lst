@@ -1,0 +1,5 @@
+PageObjects\PasswordRecoveryPage.class
+PageObjects\PersonalPage.class
+PageObjects\HomePage.class
+PageObjects\RegistrationPage.class
+PageObjects\LoginPage.class
