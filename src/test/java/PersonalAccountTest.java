@@ -2,7 +2,6 @@ import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.PersonalPage;
 import io.qameta.allure.junit4.DisplayName;
-import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

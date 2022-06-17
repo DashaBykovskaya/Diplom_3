@@ -2,7 +2,6 @@ import PageObjects.HomePage;
 import PageObjects.LoginPage;
 import PageObjects.RegistrationPage;
 import io.qameta.allure.junit4.DisplayName;
-import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Test;
 
@@ -13,9 +12,7 @@ public class RegistrationTest {
     String name = "Test";
     String email = "1218@456.ru";
     String password = "Qwerty";
-    String name1 = "Test1";
-    String email1 = "1070@45611.ru";
-    String password1 = "Qwe";
+    String incorrectPassword = "Qwe";
     LoginPage loginPage = page(LoginPage.class);
     RegistrationPage registrationPage = page(RegistrationPage.class);
     HomePage homePage = open(HomePage.pageURL, HomePage.class);
@@ -39,7 +36,7 @@ public class RegistrationTest {
     public void incorrectPasswordTest() {
         homePage.clickPersonal();
         loginPage.clickSignUpLoginPage();
-        registrationPage.sendPersonalDataIncorrectPassword(name1, email1, password1);
+        registrationPage.sendPersonalDataIncorrectPassword(name, email, incorrectPassword);
         registrationPage.clickButtonEnter();
         registrationPage.visibleErrorText();
     }

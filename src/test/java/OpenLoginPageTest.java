@@ -1,6 +1,5 @@
 import PageObjects.HomePage;
 import io.qameta.allure.junit4.DisplayName;
-import jdk.jfr.Description;
 import org.junit.After;
 import org.junit.Test;
 
