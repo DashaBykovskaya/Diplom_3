@@ -33,8 +33,7 @@ public class LoginTest {
     @Test
     @DisplayName("Вход в аккаунт через кнопку Войти в аккаунт")
     public void loginSystemMaiPageTest() {
-        homePage.signInTest();
-        homePage.clickPersonal();
+        homePage.clickSignIn();
         loginPage.sendPersonalData(email, password);
         loginPage.clickButtonEnter();
     }

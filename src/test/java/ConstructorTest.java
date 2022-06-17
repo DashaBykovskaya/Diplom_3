@@ -17,14 +17,14 @@ public class ConstructorTest {
     @DisplayName("Проверка перехода на вкладку Соусы")
     public void openSauces() {
         homePage.clickSauces();
-        homePage.openSauces();
+        homePage.goToTabSauces();
     }
 
     @Test
     @DisplayName("Проверка перехода на вкладку Начинки")
     public void openFillings() {
         homePage.clickFillings();
-        homePage.openFillings();
+        homePage.goToTabFillings();
     }
 
     @Test
@@ -32,6 +32,6 @@ public class ConstructorTest {
     public void openBuns() {
         homePage.clickFillings();
         homePage.clickBuns();
-        homePage.openBuns();
+        homePage.goToTabBuns();
     }
 }

@@ -28,7 +28,7 @@ public class HomePage {
     private SelenideElement fillings; //вкладка Начинки
 
     @Step("Нажимаем на кнопку Войти в аккаунт")
-    public void signInTest() {
+    public void clickSignIn() {
         buttonEnterFromMainPage.click();
     }
 
@@ -53,17 +53,17 @@ public class HomePage {
     }
 
     @Step("Проверка перехода на вкладку Соусы")
-    public void openSauces() {
+    public void goToTabSauces() {
         sauces.shouldBe(Condition.visible);
     }
 
     @Step("Проверка перехода на вкладку Начинки")
-    public void openFillings() {
-        sauces.shouldBe(Condition.visible);
+    public void goToTabFillings() {
+        fillings.shouldBe(Condition.visible);
     }
 
     @Step("Проверка перехода на вкладку Булки")
-    public void openBuns() {
+    public void goToTabBuns() {
         buns.shouldBe(Condition.visible);
     }
 
